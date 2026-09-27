@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+</head>
+<body>
+
+<h1>User Registration</h1>
+
+<form method="POST" action="/register" enctype="multipart/form-data">
+
+    <label>Username:</label><br>
+    <input type="text" name="username" required><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" name="password" required><br><br>
+
+    <label>First Name:</label><br>
+    <input type="text" name="firstname" required><br><br>
+
+    <label>Last Name:</label><br>
+    <input type="text" name="lastname" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Address:</label><br>
+    <input type="text" name="address" required><br><br>
+
+    <label>Upload Limerick File:</label><br>
+    <input type="file" name="file" accept=".txt" required><br><br>
+
+    <input type="submit" value="Register">
+
+</form>
+
+<br>
+
+<a href="/login">Already registered? Login here</a>
+
+</body>
+</html>
