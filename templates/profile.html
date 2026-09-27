@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+</head>
+<body>
+
+<h1>Registration Successful</h1>
+
+<p><strong>Username:</strong> {{ user["username"] }}</p>
+<p><strong>First Name:</strong> {{ user["firstname"] }}</p>
+<p><strong>Last Name:</strong> {{ user["lastname"] }}</p>
+<p><strong>Email:</strong> {{ user["email"] }}</p>
+<p><strong>Address:</strong> {{ user["address"] }}</p>
+
+<h2>Uploaded File</h2>
+
+<p><strong>Word Count:</strong> {{ user["word_count"] }}</p>
+
+{% if user["filename"] %}
+    <a href="/download/{{ user['username'] }}">
+        <button>Download Uploaded File</button>
+    </a>
+{% else %}
+    <p>No file uploaded.</p>
+{% endif %}
+
+<br><br>
+
+<a href="/login">Log in again</a>
+
+</body>
+</html>
